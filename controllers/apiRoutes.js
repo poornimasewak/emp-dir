@@ -17,8 +17,11 @@ router.get('/', (req, res) => {
                     email: emp.email,
                     last_name: emp.last_name,
                     avatar: emp.avatar
-                }).then(data => { res.send("added data in db"); })
+                });
+
+                // .then(data => { res.redirect('/'); })
             })
+            res.redirect('/list');
         })
 })
 module.exports = router;
